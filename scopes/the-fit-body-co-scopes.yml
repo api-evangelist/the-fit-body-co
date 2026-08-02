@@ -1,0 +1,31 @@
+generated: '2026-07-21'
+method: searched
+source: https://fitbody.mx/.well-known/openid-configuration
+docs: https://shopify.dev/docs/api/customer
+description: >-
+  OAuth 2.0 / OpenID Connect scopes advertised by the Shopify Customer Account
+  API OIDC discovery document served on the fitbody.mx host
+  (/.well-known/openid-configuration, issuer https://shopify.com/authentication/24443367).
+  The Fit Body Co publishes no first-party API; these scopes belong to Shopify's
+  Customer Account API platform capability enabled for this shop. Captured
+  verbatim from scopes_supported in the live discovery document. Notably includes
+  a customer-account-mcp-api:full scope gating Shopify's Customer Account MCP API.
+schemes:
+  - name: shopifyCustomerAccountOIDC
+    type: openIdConnect
+    openIdConnectUrl: https://fitbody.mx/.well-known/openid-configuration
+    issuer: https://shopify.com/authentication/24443367
+    docs: https://shopify.dev/docs/api/customer
+scopes:
+  - scope: openid
+    description: OpenID Connect authentication; issue an ID token identifying the customer.
+    schemes: [shopifyCustomerAccountOIDC]
+  - scope: email
+    description: Access the customer's email address and email_verified claim.
+    schemes: [shopifyCustomerAccountOIDC]
+  - scope: customer-account-api:full
+    description: Full access to the Shopify Customer Account API on behalf of the signed-in customer.
+    schemes: [shopifyCustomerAccountOIDC]
+  - scope: customer-account-mcp-api:full
+    description: Full access to the Shopify Customer Account MCP API on behalf of the signed-in customer.
+    schemes: [shopifyCustomerAccountOIDC]

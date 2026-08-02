@@ -1,0 +1,43 @@
+generated: '2026-07-21'
+method: searched
+source: https://fitbody.mx/.well-known/openid-configuration
+docs: https://shopify.dev/docs/api/customer
+description: >-
+  The Fit Body Co (fitbody.mx) is a Shopify-hosted storefront and publishes no
+  first-party developer API. The only authentication surface exposed on the host
+  is Shopify's Customer Account API, whose OpenID Connect discovery document is
+  served at /.well-known/openid-configuration (and /.well-known/oauth-authorization-server)
+  with issuer https://shopify.com/authentication/24443367. This profile captures
+  that OIDC/OAuth 2.0 surface verbatim from the live discovery document; it is a
+  Shopify platform capability scoped to this shop, not a bespoke Fit Body Co API.
+summary:
+  types:
+  - openIdConnect
+  - oauth2
+schemes:
+- name: shopifyCustomerAccountOIDC
+  type: openIdConnect
+  openIdConnectUrl: https://fitbody.mx/.well-known/openid-configuration
+  issuer: https://shopify.com/authentication/24443367
+  authorizationUrl: https://shopify.com/authentication/24443367/oauth/authorize
+  tokenUrl: https://shopify.com/authentication/24443367/oauth/token
+  jwksUri: https://shopify.com/authentication/24443367/.well-known/jwks.json
+  endSessionEndpoint: https://shopify.com/authentication/24443367/logout
+  grant_types:
+  - authorization_code
+  - refresh_token
+  - urn:ietf:params:oauth:grant-type:jwt-bearer
+  response_types:
+  - code
+  code_challenge_methods:
+  - S256
+  id_token_signing_alg:
+  - RS256
+  token_endpoint_auth_methods:
+  - client_secret_basic
+  scopes:
+  - openid
+  - email
+  - customer-account-api:full
+  - customer-account-mcp-api:full
+  source: https://fitbody.mx/.well-known/openid-configuration

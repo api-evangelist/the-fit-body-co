@@ -1,0 +1,26 @@
+generated: '2026-07-21'
+method: searched
+description: >-
+  Results of probing the /.well-known/ discovery surface for the base host in
+  apis.yml (https://fitbody.mx). Status is the HTTP code observed at fetch time.
+  fitbody.mx is a Shopify-hosted storefront, so the OpenID/OAuth discovery
+  documents are served by Shopify's Customer Account API platform (issuer
+  https://shopify.com/authentication/24443367) on the shop domain. Only documents
+  that returned a real, correctly-typed payload were saved verbatim.
+hosts:
+  - host: https://fitbody.mx
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 200
+        type: application/json
+        file: the-fit-body-co-openid-configuration.json
+      - path: /.well-known/oauth-authorization-server
+        status: 200
+        type: application/json
+        file: the-fit-body-co-oauth-authorization-server.json
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404

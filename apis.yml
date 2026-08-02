@@ -1,7 +1,24 @@
 aid: the-fit-body-co
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/the-fit-body-co.png
 name: The Fit Body Co
-description: The Fit Body Co is a company surfaced as a portfolio company of 500-global and added to the
-  API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: The Fit Body Co (Fitbody) is a Mexican direct-to-consumer sports nutrition and dietary
+  supplements brand selling isolated and hydrolyzed protein powders, creatine, vitamins, and wellness
+  products, along with digital recipe guides, through a Shopify-based online storefront at fitbody.mx.
+  It is a portfolio company of 500 Global. As an e-commerce retail brand it publishes no public developer
+  API, developer portal, SDK, or API documentation; this API Evangelist profile captures its company
+  identity and domain-security posture rather than an API surface.
 url: https://raw.githubusercontent.com/api-evangelist/the-fit-body-co/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,9 +28,16 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
+- Sports Nutrition
+- Dietary Supplements
+- E-commerce
+- Health and Wellness
+- Consumer Products
+- Mexico
+- Shopify
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -21,5 +45,18 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/the-fit-body-co-domain-security.yml
+- type: WellKnown
+  url: well-known/the-fit-body-co-well-known.yml
+- type: Authentication
+  url: authentication/the-fit-body-co-authentication.yml
+- type: OAuthScopes
+  url: scopes/the-fit-body-co-scopes.yml
 - type: Website
   url: https://fitbody.mx
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 6
+  pass: local-v1
